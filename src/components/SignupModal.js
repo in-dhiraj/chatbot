@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ReCAPTCHA from "react-google-recaptcha";
 
 const SignupModal = ({ showModal, closeModal }) => {
   const [name, setName] = useState('');
@@ -16,6 +17,8 @@ const SignupModal = ({ showModal, closeModal }) => {
     // Close the modal after registration (for example, if registration is successful)
     closeModal();
   };
+
+    console.log("process.env.REACT_APP_SITE_KEY",process.env.REACT_APP_SITE_KEY)
 
   return (
     <div className={`modal ${showModal ? 'show' : ''}`} tabIndex="-1" role="dialog" style={{ display: showModal ? 'block' : 'none' }}>
@@ -68,6 +71,7 @@ const SignupModal = ({ showModal, closeModal }) => {
                 onChange={(e) => setPassword(e.target.value)}
               />
             </div>
+            <ReCAPTCHA sitekey={process.env.REACT_APP_SITE_KEY} />
           </div>
           <div className="modal-footer">
             <button type="button" className="btn btn-primary" onClick={handleSignup}>
