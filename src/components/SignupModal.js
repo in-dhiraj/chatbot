@@ -18,7 +18,6 @@ const SignupModal = ({ showModal, closeModal }) => {
     closeModal();
   };
 
-    console.log("process.env.REACT_APP_SITE_KEY",process.env.REACT_APP_SITE_KEY)
 
   return (
     <div className={`modal ${showModal ? 'show' : ''}`} tabIndex="-1" role="dialog" style={{ display: showModal ? 'block' : 'none' }}>

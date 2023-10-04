@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import ReCAPTCHA from "react-google-recaptcha";
+
 
 const LoginModal = ({ showModal, closeModal }) => {
   const [phoneNumber, setPhoneNumber] = useState('');
@@ -47,6 +49,8 @@ const LoginModal = ({ showModal, closeModal }) => {
                 onChange={(e) => setPassword(e.target.value)}
               />
             </div>
+            <ReCAPTCHA sitekey={process.env.REACT_APP_SITE_KEY} />
+
           </div>
           <div className="modal-footer">
             <button type="button" className="btn btn-primary" onClick={handleLogin}>

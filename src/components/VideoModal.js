@@ -12,7 +12,7 @@ const VideoModal = () => {
         <div className="modal-body">
           {/* 16:9 aspect ratio */}
           <div className="ratio ratio-16x9">
-            <iframe className="embed-responsive-item" src='https://www.udemy.com/user/dhiraj-yadav-26/' id="video"  />
+            {/* <iframe className="embed-responsive-item" src='https://www.udemy.com/user/dhiraj-yadav-26/' id="video"  /> */}
           </div>
         </div>
       </div>

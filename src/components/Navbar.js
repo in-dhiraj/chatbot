@@ -24,6 +24,11 @@ const Navbar = () => {
         setSignUpModal(!showSignUpModal)
     }
   
+    const handleUdemyCoursesClick = () => {
+      // Redirect to the Udemy courses URL
+      window.location.href = 'https://www.udemy.com/user/dhiraj-yadav-26/';
+    };
+
     return (
     <>
     <LoginModal showModal={showModal} closeModal={closeModal}/>
@@ -46,7 +51,9 @@ const Navbar = () => {
           <h1 className="text-primary fw-bold m-0">Dhiraj Y</h1>
         </Link>
         <div className="navbar-nav me-auto py-0">
-          <Link to="/courses" className="nav-item nav-link">My Udemy Courses</Link>
+           <span className="nav-item nav-link" style={{ cursor: 'pointer' }} onClick={handleUdemyCoursesClick}>
+          My Udemy Courses
+        </span>
           <Link to="/contact" className="nav-item nav-link">Contact</Link>
           {isLoggedIn ? (
             <button className="btn btn-secondary" onClick={handleLogout}>Logout</button>
